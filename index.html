@@ -70,6 +70,31 @@
 
   .nav-links a:hover { color: var(--orange); }
 
+  .nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    padding: 0;
+    transition: color 0.25s;
+  }
+
+  .nav-btn:hover { color: var(--orange); }
+
+  button.btn-primary {
+    cursor: pointer;
+    border: none;
+  }
+
+  button.btn-secondary {
+    cursor: pointer;
+    background: none;
+  }
+
   /* ── HERO ────────────────────────────────────── */
   #hero {
     min-height: 100vh;
@@ -743,10 +768,10 @@
 <nav>
   <div class="nav-logo" contenteditable="false">Century Tutoring</div>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#exam-prep">Exam Prep</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><button class="nav-btn" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Services</button></li>
+    <li><button class="nav-btn" onclick="document.getElementById('exam-prep').scrollIntoView({behavior:'smooth'})">Exam Prep</button></li>
+    <li><button class="nav-btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</button></li>
+    <li><button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</button></li>
   </ul>
 </nav>
 
@@ -761,8 +786,8 @@
       One-on-one tutoring for university students who demand more than passing grades — built for those who want to truly understand the material.
     </p>
     <div class="hero-cta">
-      <a href="#contact" class="btn-primary" contenteditable="false">Book a Session</a>
-      <a href="#services" class="btn-secondary" contenteditable="false">View Services</a>
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Session</button>
+      <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View Services</button>
     </div>
   </div>
 
@@ -835,7 +860,7 @@
       <p style="font-size:1.15rem;font-weight:300;line-height:1.8;color:var(--text-light);margin-bottom:2.5rem;">
         Whether it's a midterm tonight or a final in two days, we'll work through the core concepts, tackle practice problems, and make sure you walk in confident. <strong style="color:var(--white);font-weight:400;">Available 24/7 — book any time, day or night.</strong>
       </p>
-      <a href="#contact" class="btn-primary">Book Emergency Session</a>
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Emergency Session</button>
     </div>
     <div style="position:relative;">
       <div style="border:1px solid var(--orange);padding:3.5rem;position:relative;background:var(--green-mid);">
